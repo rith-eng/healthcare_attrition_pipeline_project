@@ -1,0 +1,115 @@
+# =============================================================
+# .gitignore: Python + SQL + SQL Server + Tableau
+# =============================================================
+
+# ---------- Secrets and credentials (never commit these) ----------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+secrets.*
+credentials.*
+config.local.*
+*.local.json
+*.local.ini
+*.publish.xml
+*.dsn
+
+# ---------- Python ----------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Testing / coverage / type checking
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ---------- SQL Server: database files and backups ----------
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+*.bacpac
+*.sqlite
+*.sqlite3
+*.db
+
+# ---------- SQL Server: SSMS / SSDT / Visual Studio ----------
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.dbmdl
+*.jfm
+*.dtproj.user
+*.rdl.data
+*.rdl.bak
+*.dtsx.bak
+*.dacpac
+*.sqlproj.user
+*.sqlsuo
+# SSMS auto-recovery and scratch query files
+*.sql.bak
+~$*
+Backup*/
+UpgradeLog*.htm
+Generated Code/
+
+# ---------- Tableau ----------
+# Data extracts (large, regenerable, may contain real data)
+*.hyper
+*.tde
+*.tdsx
+# Local Tableau Desktop folders and logs
+My Tableau Repository/
+Tableau Repository/
+tabprotosrv*.txt
+tdeserver*.txt
+Logs/
+# NOTE: .twb (XML workbook) and .tds are kept tracked on purpose.
+# Check them for embedded server names or credentials before pushing.
+
+# ---------- Data and outputs ----------
+# Large or generated data. Keep small sample files in data/sample/
+data/generated/
+data/raw/
+output/
+outputs/
+exports/
+*.log
+
+# ---------- Editors and OS ----------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
